@@ -1,15 +1,98 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar cita con doctor</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  ola
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1>Reservar cita con doctor</h1>
+    </header>
+    <main>
+        <section class="busqueda">
+            <h2>Buscar doctor</h2>
+            <form action="#">
+                <label for="nombre">Nombre del doctor:</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="especialidad">Especialidad:</label>
+                <select id="especialidad" name="especialidad">
+                    <option value="">Todas</option>
+                    <option value="ginecologia">Ginecología</option>
+                    <option value="pediatria">Pediatría</option>
+                    <option value="medicina-general">Medicina general</option>
+                </select>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+        <section class="disponibilidad">
+            <h2>Disponibilidad de citas</h2>
+            <table class="horarios">
+                <thead>
+                    <tr>
+                        <th>Doctor</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dr. Arturo Simont Zeron</td>
+                        <td>31 de mayo</td>
+                        <td>12:30</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Arturo Simont Zeron</td>
+                        <td>1 de junio</td>
+                        <td>09:00</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Arturo Simont Zeron</td>
+                        <td>2 de junio</td>
+                        <td>08:00</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. René Augusto Hernández Morales</td>
+                        <td>31 de mayo</td>
+                        <td>10:40</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. René Augusto Hernández Morales</td>
+                        <td>1 de junio</td>
+                        <td>18:30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="reservacion">
+            <h2>Reservar cita</h2>
+            <form action="#">
+                <label for="doctor">Doctor:</label>
+                <select id="doctor" name="doctor">
+                    <option value="">Seleccionar doctor</option>
+                    <option value="simon">Dr. Arturo Simont Zeron</option>
+                    <option value="hernandez">Dr. René Augusto Hernández Morales</option>
+                </select>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+                <label for="hora">Hora:</label>
+                <select id="hora" name="hora">
+                    <option value="">Seleccionar hora</option>
+                    <option value="12:30">12:30</option>
+                    <option value="09:00">09:00</option>
+                    <option value="08:00">08:00</option>
+                    <option value="10:40">10:40</option>
+                    <option value="18:30">18:30</option>
+                </select>
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi clínica</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
+
